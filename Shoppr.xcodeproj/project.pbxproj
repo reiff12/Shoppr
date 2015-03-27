@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F2928E21A43353E00958CAA /* Bread_and_grains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F2928E11A43353E00958CAA /* Bread_and_grains.jpg */; };
+		2F7229421A44319B00873CF3 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7229411A44319B00873CF3 /* ItemsViewController.swift */; };
+		2F7229481A446BEE00873CF3 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7229471A446BEE00873CF3 /* DeliveryViewController.swift */; };
+		2F93E4C61AC3E7D1005F2BD3 /* JobsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F93E4C51AC3E7D1005F2BD3 /* JobsListTableViewController.swift */; };
+		2FC6B49D1AC49B0F004BBAED /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC6B49C1AC49B0F004BBAED /* SignUpViewController.swift */; };
+		2FDAE8941A42FF1C00AAA00E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAE8931A42FF1C00AAA00E /* AppDelegate.swift */; };
+		2FDAE8961A42FF1C00AAA00E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAE8951A42FF1C00AAA00E /* FirstViewController.swift */; };
+		2FDAE89B1A42FF1C00AAA00E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDAE89A1A42FF1C00AAA00E /* Images.xcassets */; };
+		2FDAE89E1A42FF1C00AAA00E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FDAE89C1A42FF1C00AAA00E /* LaunchScreen.xib */; };
+		2FDAE8AA1A42FF1C00AAA00E /* ShopprTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAE8A91A42FF1C00AAA00E /* ShopprTests.swift */; };
+		2FDAE8B51A42FF7900AAA00E /* buyerShoppr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FDAE8B31A42FF7900AAA00E /* buyerShoppr.jpg */; };
+		2FDAE8B61A42FF7900AAA00E /* shopperShoppr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FDAE8B41A42FF7900AAA00E /* shopperShoppr.jpg */; };
+		2FDAE8B81A430AC900AAA00E /* currentJobsShoppr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FDAE8B71A430AC900AAA00E /* currentJobsShoppr.jpg */; };
+		2FDAE8BC1A43132400AAA00E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAE8BB1A43132400AAA00E /* MoreViewController.swift */; };
+		2FDAE8C21A43193B00AAA00E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDAE8C01A43193B00AAA00E /* Main.storyboard */; };
+		2FEF5C4E1AC30F55006A9670 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF5C4D1AC30F55006A9670 /* ListViewController.swift */; };
+		2FEF5C511AC348C3006A9670 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C4F1AC348C3006A9670 /* Bolts.framework */; };
+		2FEF5C521AC348C3006A9670 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C501AC348C3006A9670 /* Parse.framework */; };
+		2FEF5C541AC3490E006A9670 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C531AC3490E006A9670 /* AudioToolbox.framework */; };
+		2FEF5C561AC34919006A9670 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C551AC34919006A9670 /* CFNetwork.framework */; };
+		2FEF5C581AC3492C006A9670 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C571AC3492C006A9670 /* CoreGraphics.framework */; };
+		2FEF5C5A1AC34935006A9670 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C591AC34935006A9670 /* CoreLocation.framework */; };
+		2FEF5C5C1AC34952006A9670 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C5B1AC34952006A9670 /* libz.dylib */; };
+		2FEF5C5E1AC34962006A9670 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C5D1AC34962006A9670 /* MobileCoreServices.framework */; };
+		2FEF5C601AC34969006A9670 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C5F1AC34969006A9670 /* Security.framework */; };
+		2FEF5C621AC34980006A9670 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C611AC34980006A9670 /* StoreKit.framework */; };
+		2FEF5C641AC3498B006A9670 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C631AC3498B006A9670 /* SystemConfiguration.framework */; };
+		2FEF5C661AC3499C006A9670 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C651AC3499C006A9670 /* QuartzCore.framework */; };
+		2FEF5C6B1AC34D8D006A9670 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEF5C6A1AC34D8D006A9670 /* libsqlite3.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FDAE8A41A42FF1C00AAA00E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FDAE8861A42FF1C00AAA00E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FDAE88D1A42FF1C00AAA00E;
+			remoteInfo = Shoppr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F2928E11A43353E00958CAA /* Bread_and_grains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bread_and_grains.jpg; sourceTree = "<group>"; };
+		2F7229411A44319B00873CF3 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		2F7229471A446BEE00873CF3 /* DeliveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliveryViewController.swift; path = ../DeliveryViewController.swift; sourceTree = "<group>"; };
+		2F93E4C51AC3E7D1005F2BD3 /* JobsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsListTableViewController.swift; path = ../JobsListTableViewController.swift; sourceTree = "<group>"; };
+		2FC6B49C1AC49B0F004BBAED /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
+		2FDAE88E1A42FF1C00AAA00E /* Shoppr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoppr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FDAE8921A42FF1C00AAA00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FDAE8931A42FF1C00AAA00E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2FDAE8951A42FF1C00AAA00E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		2FDAE89A1A42FF1C00AAA00E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2FDAE89D1A42FF1C00AAA00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2FDAE8A31A42FF1C00AAA00E /* ShopprTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopprTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FDAE8A81A42FF1C00AAA00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FDAE8A91A42FF1C00AAA00E /* ShopprTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopprTests.swift; sourceTree = "<group>"; };
+		2FDAE8B31A42FF7900AAA00E /* buyerShoppr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = buyerShoppr.jpg; sourceTree = "<group>"; };
+		2FDAE8B41A42FF7900AAA00E /* shopperShoppr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopperShoppr.jpg; sourceTree = "<group>"; };
+		2FDAE8B71A430AC900AAA00E /* currentJobsShoppr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = currentJobsShoppr.jpg; sourceTree = "<group>"; };
+		2FDAE8BB1A43132400AAA00E /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreViewController.swift; path = ../MoreViewController.swift; sourceTree = "<group>"; };
+		2FDAE8C11A43193B00AAA00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Shoppr/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2FEF5C4D1AC30F55006A9670 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		2FEF5C4F1AC348C3006A9670 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2FEF5C501AC348C3006A9670 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		2FEF5C531AC3490E006A9670 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2FEF5C551AC34919006A9670 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2FEF5C571AC3492C006A9670 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2FEF5C591AC34935006A9670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2FEF5C5B1AC34952006A9670 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		2FEF5C5D1AC34962006A9670 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2FEF5C5F1AC34969006A9670 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2FEF5C611AC34980006A9670 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2FEF5C631AC3498B006A9670 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2FEF5C651AC3499C006A9670 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2FEF5C671AC349EE006A9670 /* Shoppr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shoppr-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		2FEF5C6A1AC34D8D006A9670 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FDAE88B1A42FF1C00AAA00E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FEF5C6B1AC34D8D006A9670 /* libsqlite3.dylib in Frameworks */,
+				2FEF5C661AC3499C006A9670 /* QuartzCore.framework in Frameworks */,
+				2FEF5C641AC3498B006A9670 /* SystemConfiguration.framework in Frameworks */,
+				2FEF5C621AC34980006A9670 /* StoreKit.framework in Frameworks */,
+				2FEF5C601AC34969006A9670 /* Security.framework in Frameworks */,
+				2FEF5C5E1AC34962006A9670 /* MobileCoreServices.framework in Frameworks */,
+				2FEF5C5C1AC34952006A9670 /* libz.dylib in Frameworks */,
+				2FEF5C5A1AC34935006A9670 /* CoreLocation.framework in Frameworks */,
+				2FEF5C581AC3492C006A9670 /* CoreGraphics.framework in Frameworks */,
+				2FEF5C561AC34919006A9670 /* CFNetwork.framework in Frameworks */,
+				2FEF5C541AC3490E006A9670 /* AudioToolbox.framework in Frameworks */,
+				2FEF5C521AC348C3006A9670 /* Parse.framework in Frameworks */,
+				2FEF5C511AC348C3006A9670 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FDAE8A01A42FF1C00AAA00E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FDAE8851A42FF1C00AAA00E = {
+			isa = PBXGroup;
+			children = (
+				2FDAE8C01A43193B00AAA00E /* Main.storyboard */,
+				2FDAE8901A42FF1C00AAA00E /* Shoppr */,
+				2FDAE8A61A42FF1C00AAA00E /* ShopprTests */,
+				2FDAE88F1A42FF1C00AAA00E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2FDAE88F1A42FF1C00AAA00E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FDAE88E1A42FF1C00AAA00E /* Shoppr.app */,
+				2FDAE8A31A42FF1C00AAA00E /* ShopprTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2FDAE8901A42FF1C00AAA00E /* Shoppr */ = {
+			isa = PBXGroup;
+			children = (
+				2FEF5C671AC349EE006A9670 /* Shoppr-Bridging-Header.h */,
+				2FC6B49C1AC49B0F004BBAED /* SignUpViewController.swift */,
+				2FDAE8931A42FF1C00AAA00E /* AppDelegate.swift */,
+				2F7229471A446BEE00873CF3 /* DeliveryViewController.swift */,
+				2FEF5C4D1AC30F55006A9670 /* ListViewController.swift */,
+				2FDAE8BB1A43132400AAA00E /* MoreViewController.swift */,
+				2FDAE8951A42FF1C00AAA00E /* FirstViewController.swift */,
+				2F7229411A44319B00873CF3 /* ItemsViewController.swift */,
+				2F93E4C51AC3E7D1005F2BD3 /* JobsListTableViewController.swift */,
+				2FDAE89A1A42FF1C00AAA00E /* Images.xcassets */,
+				2FDAE89C1A42FF1C00AAA00E /* LaunchScreen.xib */,
+				2FDAE8911A42FF1C00AAA00E /* Supporting Files */,
+			);
+			path = Shoppr;
+			sourceTree = "<group>";
+		};
+		2FDAE8911A42FF1C00AAA00E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FEF5C6A1AC34D8D006A9670 /* libsqlite3.dylib */,
+				2FEF5C4F1AC348C3006A9670 /* Bolts.framework */,
+				2FEF5C501AC348C3006A9670 /* Parse.framework */,
+				2FEF5C651AC3499C006A9670 /* QuartzCore.framework */,
+				2FEF5C631AC3498B006A9670 /* SystemConfiguration.framework */,
+				2FEF5C611AC34980006A9670 /* StoreKit.framework */,
+				2FEF5C5F1AC34969006A9670 /* Security.framework */,
+				2FEF5C5D1AC34962006A9670 /* MobileCoreServices.framework */,
+				2FEF5C5B1AC34952006A9670 /* libz.dylib */,
+				2FEF5C591AC34935006A9670 /* CoreLocation.framework */,
+				2FEF5C571AC3492C006A9670 /* CoreGraphics.framework */,
+				2FEF5C551AC34919006A9670 /* CFNetwork.framework */,
+				2FEF5C531AC3490E006A9670 /* AudioToolbox.framework */,
+				2FDAE8B31A42FF7900AAA00E /* buyerShoppr.jpg */,
+				2FDAE8B41A42FF7900AAA00E /* shopperShoppr.jpg */,
+				2FDAE8B71A430AC900AAA00E /* currentJobsShoppr.jpg */,
+				2F2928E11A43353E00958CAA /* Bread_and_grains.jpg */,
+				2FDAE8921A42FF1C00AAA00E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2FDAE8A61A42FF1C00AAA00E /* ShopprTests */ = {
+			isa = PBXGroup;
+			children = (
+				2FDAE8A91A42FF1C00AAA00E /* ShopprTests.swift */,
+				2FDAE8A71A42FF1C00AAA00E /* Supporting Files */,
+			);
+			path = ShopprTests;
+			sourceTree = "<group>";
+		};
+		2FDAE8A71A42FF1C00AAA00E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FDAE8A81A42FF1C00AAA00E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2FDAE88D1A42FF1C00AAA00E /* Shoppr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FDAE8AD1A42FF1C00AAA00E /* Build configuration list for PBXNativeTarget "Shoppr" */;
+			buildPhases = (
+				2FDAE88A1A42FF1C00AAA00E /* Sources */,
+				2FDAE88B1A42FF1C00AAA00E /* Frameworks */,
+				2FDAE88C1A42FF1C00AAA00E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shoppr;
+			productName = Shoppr;
+			productReference = 2FDAE88E1A42FF1C00AAA00E /* Shoppr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2FDAE8A21A42FF1C00AAA00E /* ShopprTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FDAE8B01A42FF1C00AAA00E /* Build configuration list for PBXNativeTarget "ShopprTests" */;
+			buildPhases = (
+				2FDAE89F1A42FF1C00AAA00E /* Sources */,
+				2FDAE8A01A42FF1C00AAA00E /* Frameworks */,
+				2FDAE8A11A42FF1C00AAA00E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FDAE8A51A42FF1C00AAA00E /* PBXTargetDependency */,
+			);
+			name = ShopprTests;
+			productName = ShopprTests;
+			productReference = 2FDAE8A31A42FF1C00AAA00E /* ShopprTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2FDAE8861A42FF1C00AAA00E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Tyler Reiff";
+				TargetAttributes = {
+					2FDAE88D1A42FF1C00AAA00E = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Y8NYM9UVJR;
+					};
+					2FDAE8A21A42FF1C00AAA00E = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 2FDAE88D1A42FF1C00AAA00E;
+					};
+				};
+			};
+			buildConfigurationList = 2FDAE8891A42FF1C00AAA00E /* Build configuration list for PBXProject "Shoppr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2FDAE8851A42FF1C00AAA00E;
+			productRefGroup = 2FDAE88F1A42FF1C00AAA00E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FDAE88D1A42FF1C00AAA00E /* Shoppr */,
+				2FDAE8A21A42FF1C00AAA00E /* ShopprTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FDAE88C1A42FF1C00AAA00E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FDAE8B51A42FF7900AAA00E /* buyerShoppr.jpg in Resources */,
+				2FDAE89E1A42FF1C00AAA00E /* LaunchScreen.xib in Resources */,
+				2F2928E21A43353E00958CAA /* Bread_and_grains.jpg in Resources */,
+				2FDAE8B61A42FF7900AAA00E /* shopperShoppr.jpg in Resources */,
+				2FDAE8C21A43193B00AAA00E /* Main.storyboard in Resources */,
+				2FDAE89B1A42FF1C00AAA00E /* Images.xcassets in Resources */,
+				2FDAE8B81A430AC900AAA00E /* currentJobsShoppr.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FDAE8A11A42FF1C00AAA00E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FDAE88A1A42FF1C00AAA00E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FDAE8BC1A43132400AAA00E /* MoreViewController.swift in Sources */,
+				2F93E4C61AC3E7D1005F2BD3 /* JobsListTableViewController.swift in Sources */,
+				2FC6B49D1AC49B0F004BBAED /* SignUpViewController.swift in Sources */,
+				2F7229481A446BEE00873CF3 /* DeliveryViewController.swift in Sources */,
+				2FEF5C4E1AC30F55006A9670 /* ListViewController.swift in Sources */,
+				2FDAE8961A42FF1C00AAA00E /* FirstViewController.swift in Sources */,
+				2F7229421A44319B00873CF3 /* ItemsViewController.swift in Sources */,
+				2FDAE8941A42FF1C00AAA00E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FDAE89F1A42FF1C00AAA00E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FDAE8AA1A42FF1C00AAA00E /* ShopprTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FDAE8A51A42FF1C00AAA00E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FDAE88D1A42FF1C00AAA00E /* Shoppr */;
+			targetProxy = 2FDAE8A41A42FF1C00AAA00E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2FDAE89C1A42FF1C00AAA00E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FDAE89D1A42FF1C00AAA00E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		2FDAE8C01A43193B00AAA00E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FDAE8C11A43193B00AAA00E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2FDAE8AB1A42FF1C00AAA00E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2FDAE8AC1A42FF1C00AAA00E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2FDAE8AE1A42FF1C00AAA00E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shoppr",
+				);
+				INFOPLIST_FILE = Shoppr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shoppr-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2FDAE8AF1A42FF1C00AAA00E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shoppr",
+				);
+				INFOPLIST_FILE = Shoppr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shoppr-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		2FDAE8B11A42FF1C00AAA00E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShopprTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoppr.app/Shoppr";
+			};
+			name = Debug;
+		};
+		2FDAE8B21A42FF1C00AAA00E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShopprTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoppr.app/Shoppr";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FDAE8891A42FF1C00AAA00E /* Build configuration list for PBXProject "Shoppr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FDAE8AB1A42FF1C00AAA00E /* Debug */,
+				2FDAE8AC1A42FF1C00AAA00E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FDAE8AD1A42FF1C00AAA00E /* Build configuration list for PBXNativeTarget "Shoppr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FDAE8AE1A42FF1C00AAA00E /* Debug */,
+				2FDAE8AF1A42FF1C00AAA00E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FDAE8B01A42FF1C00AAA00E /* Build configuration list for PBXNativeTarget "ShopprTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FDAE8B11A42FF1C00AAA00E /* Debug */,
+				2FDAE8B21A42FF1C00AAA00E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2FDAE8861A42FF1C00AAA00E /* Project object */;
+}
