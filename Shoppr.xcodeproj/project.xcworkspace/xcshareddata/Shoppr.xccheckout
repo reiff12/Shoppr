@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1D5E8251-F218-4428-B264-CFA26FB4AE69</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Shoppr</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8EBA736BF48367A94E4AF22B9F041BF4F68A0AF9</key>
+		<string>https://github.com/reiff12/Shoppr.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Shoppr.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8EBA736BF48367A94E4AF22B9F041BF4F68A0AF9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/reiff12/Shoppr.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8EBA736BF48367A94E4AF22B9F041BF4F68A0AF9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8EBA736BF48367A94E4AF22B9F041BF4F68A0AF9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Shoppr</string>
+		</dict>
+	</array>
+</dict>
+</plist>

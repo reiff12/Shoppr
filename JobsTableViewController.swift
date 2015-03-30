@@ -1,20 +1,38 @@
 //
-//  JobsListTableViewController.swift
+//  MainPageTableViewController.swift
 //  Shoppr
 //
-//  Created by Tyler on 3/26/15.
+//  Created by Tyler on 3/29/15.
 //  Copyright (c) 2015 Tyler Reiff. All rights reserved.
 //
 
 import UIKit
 
-class JobsListTableViewController: UITableViewController {
+class MainPageTableViewController: UITableViewController {
+    
+    var users = ["Tyler", "Spins", "Messuri"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var queMainJobs = PFQuery(className: "List")
-        queMainJobs.getFirstObject()
+        var userQuery = PFUser.query()
+        userQuery.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            self.users.removeAll(keepCapacity: true)
+            for object in objects {
+                
+                var user:PFUser = object as PFUser
+                
+                self.users.append(user.username)
+            }
+            
+            self.tableView.reloadData()
+            
+            
+        })
+        
+        
+    
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,6 +40,7 @@ class JobsListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,24 +52,28 @@ class JobsListTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return users.count
+        
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        
+        cell.textLabel?.text = users[indexPath.row]
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

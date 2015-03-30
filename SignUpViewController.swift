@@ -76,7 +76,6 @@ class SignUpViewController: UIViewController {
     }
     
     
-    
     @IBAction func signUp(sender: AnyObject) {
             
         var error = ""
@@ -105,6 +104,9 @@ class SignUpViewController: UIViewController {
             activityIndicator.startAnimating()
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
+            if signupActive == true {
+                
+        
                 
                 user.signUpInBackgroundWithBlock {
                     (succeeded: Bool!, signUpError: NSError!) -> Void in
@@ -130,10 +132,26 @@ class SignUpViewController: UIViewController {
                         // Show the errorString somewhere and let the user try again.
                         
                         self.displayAlert("Couldn't Sign Up", error: error)
+                        }
+                    }
+                } else {
+                
+                    PFUser.logInWithUsernameInBackground(username.text, password:password.text) {
+                        (user: PFUser!, signInError: NSError!) -> Void in
+                        if user != nil {
+                        
+                            println("Signed In")
+                        
+                            // Do stuff after successful login.
+                        } else {
+                            
+                            self.displayAlert("Coundn't Log In", error: error)
+                            // The login failed. Check error to see why.
                     }
                 }
             }
         }
+    }
     
     
     
@@ -142,7 +160,19 @@ class SignUpViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        if PFUser.currentUser() != nil {
+            
+            self.performSegueWithIdentifier("jumpToMainTable", sender: self)
+            
+        }
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
