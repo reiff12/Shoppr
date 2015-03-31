@@ -1,5 +1,5 @@
 //
-//  MainPageTableViewController.swift
+//  JobsTableViewController.swift
 //  Shoppr
 //
 //  Created by Tyler on 3/29/15.
@@ -8,39 +8,89 @@
 
 import UIKit
 
-class MainPageTableViewController: UITableViewController {
+class JobsTableViewController: UITableViewController {
     
-    var users = ["Tyler", "Spins", "Messuri"]
+    
+    var list = [""]
+    
+    var refresher: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateJobs()
+        
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refresher)
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    
+    }
+    /*
+    func updateUsers() {
+        
         var userQuery = PFUser.query()
+        
         userQuery.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
             
-            self.users.removeAll(keepCapacity: true)
+            self.list.removeAll(keepCapacity: true)
+            
             for object in objects {
                 
                 var user:PFUser = object as PFUser
                 
-                self.users.append(user.username)
+                self.list.append(user.username)
             }
             
             self.tableView.reloadData()
-            
-            
+            self.refresher.endRefreshing()
         })
-        
-        
-    
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    */
+    
+    
+    func updateJobs() {
+        
+        var jobsQuery = PFQuery(className: "Order")
+        
+        jobsQuery.getObjectInBackgroundWithId("0sDt3DxXWL") {
+            (listText:PFObject!, error:NSError!) -> Void in
+            
+            self.list.removeAll(keepCapacity: true)
+            
+            self.list.append(listText.objectForKey("listText") as NSString)
 
+            if error == nil {
+                
+                println(self.list)
+                
+            } else {
+                
+                println("error")
+            }
+            
+            self.tableView.reloadData()
+            self.refresher.endRefreshing()
+        }
+    }
+    
+    
+    func refresh() {
+        
+        println("refreshed")
+        
+        updateJobs()
+        
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,7 +108,7 @@ class MainPageTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return users.count
+        return list.count
         
     }
 
@@ -67,7 +117,7 @@ class MainPageTableViewController: UITableViewController {
 
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         
-        cell.textLabel?.text = users[indexPath.row]
+        cell.textLabel?.text = list[indexPath.row]
 
         // Configure the cell...
 

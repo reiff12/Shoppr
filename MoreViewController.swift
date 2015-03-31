@@ -1,5 +1,5 @@
 //
-//  savedListCreateViewController.swift
+//  MoreViewController.swift
 //  Shoppr
 //
 //  Created by Tyler on 3/30/15.
@@ -8,36 +8,29 @@
 
 import UIKit
 
-class savedListCreateViewController: UIViewController {
+class MoreViewController: UIViewController {
     
-
-    @IBOutlet var listTitle: UITextField!
-   
-    @IBOutlet var list: UITextView!
     
-    @IBAction func save(sender: AnyObject) {
+    @IBAction func logOut(sender: AnyObject) {
         
-        var savedList = PFObject(className: "SavedList")
-        savedList["username"] = PFUser.currentUser()
-        savedList["listTitle"] = listTitle.text
-        savedList["list"] = list.text
+        PFUser.logOut()
         
-        savedList.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError!) -> Void in
-            if (success) {
-                // The object has been saved.
-            } else {
-                // There was a problem, check error.description
-            }
-        }
+        self.performSegueWithIdentifier("logOutSegue", sender: self)
+    
     }
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    override func viewDidAppear(animated: Bool) {
+
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

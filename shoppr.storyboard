@@ -32,22 +32,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already Registered?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afz-SV-T3I">
-                                <rect key="frame" x="61" y="336" width="118" height="21"/>
+                                <rect key="frame" x="74" y="336" width="118" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaD-tI-LJ8">
-                                <rect key="frame" x="106" y="298" width="109" height="30"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="signUp:" destination="cZc-Gu-LDh" eventType="touchUpInside" id="zOH-et-WKY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bY-Fq-Xt6">
-                                <rect key="frame" x="171" y="332" width="75" height="30"/>
+                                <rect key="frame" x="178" y="332" width="75" height="30"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -66,6 +57,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaD-tI-LJ8">
+                                <rect key="frame" x="106" y="298" width="109" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUp:" destination="cZc-Gu-LDh" eventType="touchUpInside" id="zOH-et-WKY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -96,11 +96,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Delivery Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-V1-fdl">
-                                <rect key="frame" x="16" y="366" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Special Instructions for Shopper" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dA4-jj-4v3">
                                 <rect key="frame" x="16" y="404" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -115,12 +110,17 @@
                                     <action selector="saveList:" destination="ua4-WT-yF8" eventType="touchUpInside" id="r9a-sc-Kpp"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVe-Ne-yzz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="vVe-Ne-yzz">
                                 <rect key="frame" x="0.0" y="64" width="320" height="279"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Delivery Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-V1-fdl">
+                                <rect key="frame" x="16" y="366" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.87260105300000002" green="0.87260105300000002" blue="0.87260105300000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="918" y="216"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="MIA-Lc-IE2">
             <objects>
-                <viewController id="1FB-6d-C2a" sceneMemberID="viewController">
+                <viewController id="1FB-6d-C2a" customClass="MoreViewController" customModule="Shoppr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TGF-cY-zVM"/>
                         <viewControllerLayoutGuide type="bottom" id="gub-jh-Sj3"/>
@@ -162,7 +162,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSM-Af-0S7">
-                                <rect key="frame" x="0.0" y="373" width="142" height="123.5"/>
+                                <rect key="frame" x="0.0" y="373" width="142" height="124"/>
                                 <state key="normal" title="Share Us">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -172,6 +172,9 @@
                                 <state key="normal" title="Log Out">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="logOut:" destination="1FB-6d-C2a" eventType="touchUpInside" id="XhL-PG-UQs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVn-Nq-sga">
                                 <rect key="frame" x="165" y="243" width="155" height="123"/>
@@ -181,7 +184,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amy-OZ-vgd">
                                 <rect key="frame" x="1" y="243" width="141" height="124"/>
-                                <state key="normal" title="Payment Options">
+                                <state key="normal" title="    Payment Options">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -194,21 +197,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="cZc-Gu-LDh" kind="show" identifier="logOutSegue" id="vdK-Wz-kVR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbH-pY-Xrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="344" y="2193"/>
+            <point key="canvasLocation" x="332" y="2193"/>
         </scene>
         <!--Saved Lists Table View Controller-->
         <scene sceneID="zAm-5a-qpq">
             <objects>
                 <tableViewController id="NAC-Z5-l8Q" customClass="SavedListsTableViewController" customModule="Shoppr" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZpI-gi-8E3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZpI-gi-8E3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedList" id="JtC-dw-WIK" customClass="saved">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedList" rowHeight="57" id="JtC-dw-WIK" customClass="saved">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JtC-dw-WIK" id="92H-Yn-juQ">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -276,27 +283,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIa-tV-xcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="2193"/>
+            <point key="canvasLocation" x="1613" y="2193"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="lFS-fM-XvK">
             <objects>
-                <tableViewController id="PdW-0C-AD0" customClass="MainPageTableViewController" customModule="Shoppr" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xHX-ih-JLQ">
+                <tableViewController id="PdW-0C-AD0" customClass="JobsTableViewController" customModule="Shoppr" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IWY-jg-jzY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0hP-3D-mge">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="kzm-5l-oxa">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0hP-3D-mge" id="z8a-5p-ZSZ">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kzm-5l-oxa" id="8iK-pS-B2n">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="PdW-0C-AD0" id="gzo-vm-wmg"/>
-                            <outlet property="delegate" destination="PdW-0C-AD0" id="VCW-JD-YBK"/>
+                            <outlet property="dataSource" destination="PdW-0C-AD0" id="3cc-vp-sgk"/>
+                            <outlet property="delegate" destination="PdW-0C-AD0" id="Je0-5y-4BA"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Shop" id="uQl-Sb-mST"/>
@@ -316,7 +323,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="j9P-QU-Ejm" kind="relationship" relationship="rootViewController" id="a7s-PL-OeI"/>
+                        <segue destination="j9P-QU-Ejm" kind="relationship" relationship="rootViewController" id="4co-a5-P5Y"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hB-rQ-T1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -336,7 +343,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiS-As-uXY">
-                                <rect key="frame" x="109" y="193" width="102" height="30"/>
+                                <rect key="frame" x="109" y="155" width="102" height="30"/>
                                 <state key="normal" title="make list">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -345,7 +352,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ux-kg-DR9">
-                                <rect key="frame" x="115" y="269" width="91" height="30"/>
+                                <rect key="frame" x="115" y="231" width="91" height="30"/>
                                 <state key="normal" title="get jobs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -354,7 +361,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFU-SG-o6I">
-                                <rect key="frame" x="87" y="355" width="147" height="30"/>
+                                <rect key="frame" x="87" y="317" width="147" height="30"/>
                                 <state key="normal" title="Current jobs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -363,7 +370,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5m-CK-ljB">
-                                <rect key="frame" x="137" y="421" width="46" height="30"/>
+                                <rect key="frame" x="137" y="383" width="46" height="30"/>
                                 <state key="normal" title="More">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

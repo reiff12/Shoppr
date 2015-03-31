@@ -10,10 +10,21 @@ import UIKit
 
 class SavedListsTableViewController: UITableViewController {
     
+    var refresher = UIRefreshControl()
+    
     var savedListTitle = ["item1", "item2", "item3"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateJobs()
+        
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refresher)
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,6 +33,44 @@ class SavedListsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    
+    func updateJobs() {
+        
+        var jobsQuery = PFQuery(className: "SavedList")
+        
+        jobsQuery.getObjectInBackgroundWithId("NDoNuuZNO5") {
+            (listTitle:PFObject!, error:NSError!) -> Void in
+            
+            self.savedListTitle.removeAll(keepCapacity: true)
+            
+        self.savedListTitle.append(listTitle.objectForKey("listTitle") as NSString)
+            
+            if error == nil {
+                
+                println("found")
+
+                // do stuff with found data
+                
+            } else {
+                
+                println("error")
+            }
+            
+            self.tableView.reloadData()
+            self.refresher.endRefreshing()
+        }
+    }
+    
+    
+    func refresh() {
+        
+        println("refreshed")
+        
+        updateJobs()
+        
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

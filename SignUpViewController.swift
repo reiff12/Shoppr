@@ -75,7 +75,6 @@ class SignUpViewController: UIViewController {
         
     }
     
-    
     @IBAction func signUp(sender: AnyObject) {
             
         var error = ""
@@ -106,8 +105,6 @@ class SignUpViewController: UIViewController {
             
             if signupActive == true {
                 
-        
-                
                 user.signUpInBackgroundWithBlock {
                     (succeeded: Bool!, signUpError: NSError!) -> Void in
                     
@@ -115,9 +112,12 @@ class SignUpViewController: UIViewController {
                     UIApplication.sharedApplication().endIgnoringInteractionEvents()
                     
                     if signUpError == nil {
-                        // Hooray! Let them use the app now.
-                    
-                    } else {
+                        
+                        if PFUser.currentUser() != nil {
+                            
+                            self.performSegueWithIdentifier("jumpToMainTable", sender: self)
+                            }
+                        } else {
                         
                         if let errorString = signUpError.userInfo?["error"] as? NSString{
                         
@@ -139,7 +139,9 @@ class SignUpViewController: UIViewController {
                     PFUser.logInWithUsernameInBackground(username.text, password:password.text) {
                         (user: PFUser!, signInError: NSError!) -> Void in
                         if user != nil {
-                        
+                            
+                            self.performSegueWithIdentifier("jumpToMainTable", sender: self)
+                            
                             println("Signed In")
                         
                             // Do stuff after successful login.
@@ -173,8 +175,21 @@ class SignUpViewController: UIViewController {
         
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+        
+        self.navigationController?.navigationBarHidden = false
+    }
+    
 
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         

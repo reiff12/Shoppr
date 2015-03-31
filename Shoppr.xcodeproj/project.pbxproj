@@ -11,6 +11,7 @@
 		2F435FB11AC8A15E00624570 /* MakeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435FB01AC8A15E00624570 /* MakeListViewController.swift */; };
 		2F435FB31AC9A05C00624570 /* savedListCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435FB21AC9A05C00624570 /* savedListCreateViewController.swift */; };
 		2F435FB51AC9A34C00624570 /* SavedListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435FB41AC9A34C00624570 /* SavedListsTableViewController.swift */; };
+		2F435FB71ACA021F00624570 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F435FB61ACA021F00624570 /* MoreViewController.swift */; };
 		2FC6B49D1AC49B0F004BBAED /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC6B49C1AC49B0F004BBAED /* SignUpViewController.swift */; };
 		2FDAE8941A42FF1C00AAA00E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAE8931A42FF1C00AAA00E /* AppDelegate.swift */; };
 		2FDAE89B1A42FF1C00AAA00E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDAE89A1A42FF1C00AAA00E /* Images.xcassets */; };
@@ -51,6 +52,7 @@
 		2F435FB01AC8A15E00624570 /* MakeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MakeListViewController.swift; path = ../MakeListViewController.swift; sourceTree = "<group>"; };
 		2F435FB21AC9A05C00624570 /* savedListCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = savedListCreateViewController.swift; path = ../savedListCreateViewController.swift; sourceTree = "<group>"; };
 		2F435FB41AC9A34C00624570 /* SavedListsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedListsTableViewController.swift; path = ../SavedListsTableViewController.swift; sourceTree = "<group>"; };
+		2F435FB61ACA021F00624570 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreViewController.swift; path = ../MoreViewController.swift; sourceTree = "<group>"; };
 		2FC6B49C1AC49B0F004BBAED /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 		2FDAE88E1A42FF1C00AAA00E /* Shoppr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoppr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDAE8921A42FF1C00AAA00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,9 +136,10 @@
 		2FDAE8901A42FF1C00AAA00E /* Shoppr */ = {
 			isa = PBXGroup;
 			children = (
+				2FEF5C671AC349EE006A9670 /* Shoppr-Bridging-Header.h */,
+				2F435FB61ACA021F00624570 /* MoreViewController.swift */,
 				2F435FB41AC9A34C00624570 /* SavedListsTableViewController.swift */,
 				2F435FB21AC9A05C00624570 /* savedListCreateViewController.swift */,
-				2FEF5C671AC349EE006A9670 /* Shoppr-Bridging-Header.h */,
 				2F435FB01AC8A15E00624570 /* MakeListViewController.swift */,
 				2FC6B49C1AC49B0F004BBAED /* SignUpViewController.swift */,
 				2FDAE8931A42FF1C00AAA00E /* AppDelegate.swift */,
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F435FB71ACA021F00624570 /* MoreViewController.swift in Sources */,
 				2F435FB11AC8A15E00624570 /* MakeListViewController.swift in Sources */,
 				2F435FB51AC9A34C00624570 /* SavedListsTableViewController.swift in Sources */,
 				2F435FB31AC9A05C00624570 /* savedListCreateViewController.swift in Sources */,
