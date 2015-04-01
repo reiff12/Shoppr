@@ -10,21 +10,23 @@ import UIKit
 
 class SavedListsTableViewController: UITableViewController {
     
+    
+    var savedListTitle = [""]
+    
     var refresher = UIRefreshControl()
     
-    var savedListTitle = ["item1", "item2", "item3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        updateJobs()
+    
+        updateList()
         
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refresher)
-        
-        
+
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,32 +34,47 @@ class SavedListsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        refresh()
+    }
 
     
-    func updateJobs() {
+    func updateList() {
         
-        var jobsQuery = PFQuery(className: "SavedList")
+        var query = PFQuery(className: "SavedList")
         
-        jobsQuery.getObjectInBackgroundWithId("NDoNuuZNO5") {
-            (listTitle:PFObject!, error:NSError!) -> Void in
+        query.whereKey("username", equalTo: PFUser.currentUser())
+        
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
             
             self.savedListTitle.removeAll(keepCapacity: true)
-            
-        self.savedListTitle.append(listTitle.objectForKey("listTitle") as NSString)
-            
-            if error == nil {
-                
-                println("found")
 
-                // do stuff with found data
+            if error == nil {
+        
+                //if it worked
+                println("it worked")
+                // do something with the found objects
+                
+                if let objects = objects as? [PFObject] {
+                    
+                    for object in objects {
+                        
+                        self.savedListTitle.append(object.objectForKey("listTitle") as NSString)
+                    }
+                }
+                
+                self.tableView.reloadData()
                 
             } else {
                 
-                println("error")
+                // list details of the failure
+                println("error: \(error) \(error.userInfo!)")
             }
             
-            self.tableView.reloadData()
-            self.refresher.endRefreshing()
+           self.refresher.endRefreshing()
         }
     }
     
@@ -66,8 +83,7 @@ class SavedListsTableViewController: UITableViewController {
         
         println("refreshed")
         
-        updateJobs()
-        
+        updateList()
     }
 
     

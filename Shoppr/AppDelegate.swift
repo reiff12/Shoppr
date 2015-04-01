@@ -15,13 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-        Parse.setApplicationId("r9UrIdxtvGj4FimpH5hZ3pD7OOjvCDhFmoiHGYNF", clientKey: "UHWOnod7dHK7HsgYI2lMoEccf2VsS4JidPNFFM7y")
         
         // Override point for customization after application launch.
+        Parse.setApplicationId("r9UrIdxtvGj4FimpH5hZ3pD7OOjvCDhFmoiHGYNF", clientKey: "UHWOnod7dHK7HsgYI2lMoEccf2VsS4JidPNFFM7y")
         
         return true
-        
     }
 
 
@@ -42,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+            
     }
 
     func applicationWillTerminate(application: UIApplication) {

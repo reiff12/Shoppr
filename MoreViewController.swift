@@ -16,7 +16,6 @@ class MoreViewController: UIViewController {
         PFUser.logOut()
         
         self.performSegueWithIdentifier("logOutSegue", sender: self)
-    
     }
     
 
@@ -25,12 +24,8 @@ class MoreViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+   
     
-    
-    
-    override func viewDidAppear(animated: Bool) {
-
-            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

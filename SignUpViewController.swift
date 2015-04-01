@@ -9,7 +9,7 @@
 import UIKit
 
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     var signupActive = true
     
@@ -35,6 +35,12 @@ class SignUpViewController: UIViewController {
 
     @IBOutlet var password: UITextField!
     
+    @IBOutlet var email: UITextField!
+    
+    @IBOutlet var phoneNumber: UITextField!
+    
+    @IBOutlet var confPass: UITextField!
+    
     
    
     @IBOutlet var alreadyRegistered: UILabel!
@@ -48,6 +54,8 @@ class SignUpViewController: UIViewController {
     @IBAction func toggleSignUp(sender: AnyObject) {
         
         if signupActive == true {
+            
+            
             
             signupActive = false
             
@@ -84,10 +92,14 @@ class SignUpViewController: UIViewController {
             error = "Please enter a username and password"
                 
         }
+        if password.text != confPass.text {
+            
+            error = "passwords do not match"
+        }
         
         if error != "" {
 
-            displayAlert("Error im form", error: error)
+            displayAlert("Error in form", error: error)
         
         } else {
             
@@ -95,6 +107,8 @@ class SignUpViewController: UIViewController {
                 var user = PFUser()
                 user.username = username.text
                 user.password = password.text
+                user.email = email.text
+                user["PhoneNumber"] = phoneNumber.text
             
             activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
             activityIndicator.center = self.view.center
@@ -161,9 +175,28 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        
+        self.username.delegate = self
+        self.password.delegate = self
+        self.confPass.delegate = self
+        self.email.delegate = self
+        self.phoneNumber.delegate = self
     }
+    
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        
+        self.view.endEditing(true)
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+
     
     override func viewDidAppear(animated: Bool) {
         

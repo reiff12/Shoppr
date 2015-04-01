@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MakeListViewController: UIViewController {
+class MakeListViewController: UIViewController, UITextFieldDelegate  {
     
     func displayAlert(title:String, error:String) {
         
@@ -58,7 +58,7 @@ class MakeListViewController: UIViewController {
                 (success: Bool, error: NSError!) -> Void in
                 if (success) {
                     // The object has been saved.
-                } else {
+                    self.displayAlert("Your list has been sent out!", error: "Check More > Find Jobs to see!" )
                     // There was a problem, check error.description
                     
                 }
@@ -71,12 +71,43 @@ class MakeListViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.delvAdd.delegate = self
+        self.specInst.delegate = self
     }
-
+    
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        
+        self.view.endEditing(true)
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+        
+        self.navigationController?.navigationBarHidden = false
+    }
+
     
 
     /*
